@@ -6,10 +6,12 @@ from taxi.models import Car, Driver, Manufacturer
 
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
-    search_fields = [
+    list_display = (
         "model",
         "manufacturer",
-    ]
+    )
+    search_fields = ("model",)
+    list_filter = ("manufacturer",)
 
 
 @admin.register(Driver)

@@ -35,3 +35,6 @@ class Car(models.Model):
         ordering = ["model"]
         verbose_name = "car"
         verbose_name_plural = "cars"
+
+    def __str__(self):
+        return self.model
